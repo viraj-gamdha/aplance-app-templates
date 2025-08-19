@@ -11,6 +11,7 @@ This custom starter template builds a robust foundation for server-side applicat
 - **Authentication Utilities**: JWT-based auth with `TryCatch` for async error handling and `ErrorHandler` for consistent error responses.
 - **Import Aliases**: `@/` alias mapped to `src/` for cleaner imports.
 - **Environment Management**: Uses `dotenv` for secure configuration of environment variables (e.g., `DB_URI`, `PORT`, `ALLOWED_ORIGINS`).
+- **Dockerfile**: Dockerfiles setup for development and production.
 
 ## Folder Structure
 
