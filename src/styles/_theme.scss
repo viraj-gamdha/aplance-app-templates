@@ -1,0 +1,57 @@
+// Fonts
+// always prefer to use .woff or .woff2
+
+/* To add a new font
+ 1. add font file in public/fonts
+ 2. add new font-face here with url
+ 3. add preload script in index.html
+*/
+
+@font-face {
+  font-family: "InterRegular";
+  src: url("/fonts/Inter-Regular.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+}
+
+// CSS variables
+:root {
+  // colors
+  /*
+  none - default
+  l - light
+  m - mid
+  */
+  --color-primary: #0291de;
+
+  --color-text: #1a1a1a;
+  --color-text-l: #434343;
+  
+  --color-bg: #eaeaea;
+
+  --color-border: #d1d1d1;
+  --color-border-d: #aaaaaa;
+
+  // fonts
+  --font-1: "InterRegular", sans-serif;
+
+  // shadows
+  --shadow-1: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* 🌙 Dark Theme Overrides */
+[data-theme="dark"] {
+  //  colors
+  --color-primary: #ffffff;
+
+  --color-text: #e5e5e5;
+  --color-text-l: #bcbcbc;
+  
+  --color-bg: #1e1e1e;
+
+  //  fonts
+  --font-1: "InterRegular", sans-serif;
+
+  //  shadows
+  --shadow-1: 0 2px 6px rgba(255, 255, 255, 0.1);
+}
