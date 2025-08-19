@@ -42,11 +42,11 @@ aplance-app-templates/
      # Example
      git clone -b react-vite-ts-scss https://github.com/viraj-gamdha/aplance-app-templates.git my-new-app
      ```
-   - In place of <project-folder-name> can just use . if want to clone in root of folder.
+   - In place of project-folder-name can just use . if want to clone in root of folder.
    - This command creates a new folder (e.g., `my-new-app`) containing only the files from the specified template branch.
 
 4. **Start Your Project**:
-   - Navigate into the project folder:
+   - Navigate into the project folder (optional if new dir is created):
      ```bash
      cd <project-folder-name>
      ```
