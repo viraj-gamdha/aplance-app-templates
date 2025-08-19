@@ -5,7 +5,7 @@ Welcome to the `aplance-app-templates` repository! This repository is a collecti
 ## Description
 
 - **Purpose**: Provides ready-to-use templates for building applications, saving you time on initial setup.
-- **Categories**: Includes templates for frontend (e.g., React, Vue), backend (e.g., Node.js, Django), and fullstack projects.
+- **Categories**: Includes templates for frontend (e.g., React), backend (e.g., Node.js - Express.js, Nest.js), and fullstack projects.
 - **Structure**: On the `main` branch, templates are organized in subfolders (`frontend/`, `backend/`, `fullstack/`). Each template has its own branch with files at the root for seamless project initialization.
 
 ## Folder Structure
@@ -13,10 +13,8 @@ Welcome to the `aplance-app-templates` repository! This repository is a collecti
 ```
 aplance-app-templates/
 ├── frontend/
-│   ├── react-vite-ts-scss/
-│   │   # React + Vite + TypeScript + SCSS template
-│   ├── <other-frontend-template>/
-│   # Other frontend templates
+│   ├── <frontend-template>/
+│   # Frontend templates
 ├── backend/
 │   ├── <backend-template>/
 │   # Backend templates
@@ -37,7 +35,7 @@ aplance-app-templates/
 3. **Run the Clone Command**:
    - Use the `-b` flag to specify the branch name.
      ```bash
-     git clone -b <template-name> <repository-url> <project-folder-name>
+     git clone -b <template-name> https://github.com/viraj-gamdha/aplance-app-templates.git <project-folder-name>
 
      # Example
      git clone -b react-vite-ts-scss https://github.com/viraj-gamdha/aplance-app-templates.git my-new-app
@@ -56,8 +54,8 @@ aplance-app-templates/
 5. **Clone the Entire Catalog (Optional)**:
    - To browse all templates, clone the `main` branch:
      ```bash
-     git clone https://github.com/viraj-gamdha/aplance-app-templates.git aplance-app-templates
-     cd aplance-app-templates
+     git clone https://github.com/viraj-gamdha/aplance-app-templates.git your-folder-name
+     cd your-folder-name
      ```
    - Explore the `frontend/`, `backend/`, and `fullstack/` folders to view all templates.
 
