@@ -40,8 +40,9 @@ aplance-app-templates/
      git clone -b <template-name> <repository-url> <project-folder-name>
 
      # Example
-     git clone -b react-vite-ts-scss https://github.com/your-username/aplance-app-templates.git my-new-app
+     git clone -b react-vite-ts-scss https://github.com/viraj-gamdha/aplance-app-templates.git my-new-app
      ```
+   - In place of <project-folder-name> can just use . if want to clone in root of folder.
    - This command creates a new folder (e.g., `my-new-app`) containing only the files from the specified template branch.
 
 4. **Start Your Project**:
@@ -55,7 +56,7 @@ aplance-app-templates/
 5. **Clone the Entire Catalog (Optional)**:
    - To browse all templates, clone the `main` branch:
      ```bash
-     git clone https://github.com/your-username/aplance-app-templates.git aplance-app-templates
+     git clone https://github.com/viraj-gamdha/aplance-app-templates.git aplance-app-templates
      cd aplance-app-templates
      ```
    - Explore the `frontend/`, `backend/`, and `fullstack/` folders to view all templates.
