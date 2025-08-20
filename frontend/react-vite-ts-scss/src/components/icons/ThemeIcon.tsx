@@ -1,7 +1,7 @@
 export const ThemeIcon = ({ current }: { current: "dark" | "light" }) => {
   return (
     <>
-      {current === "light" ? (
+      {current === "dark" ? (
         <svg
           width="20"
           height="20"
