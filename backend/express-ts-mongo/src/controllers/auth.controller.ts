@@ -145,10 +145,14 @@ export const refreshToken = TryCatch<
     return next(new ErrorHandler(403, "Forbidden"));
   }
 
+  if (!payload || !payload.userId) {
+    return next(new ErrorHandler(401, "Unauthorized!"));
+  }
+
   // Find user
   const user = await Users.findById(payload?.userId);
   if (!user) {
-    return next(new ErrorHandler(401, "Invalid credentials"));
+    return next(new ErrorHandler(401, "Unauthorized!"));
   }
 
   const newAccessToken = jwt.sign(
@@ -159,22 +163,6 @@ export const refreshToken = TryCatch<
     process.env.JWT_SECRET!,
     { expiresIn: ACCESS_TOKEN_EXPIRY }
   );
-
-  const newRefreshToken = jwt.sign(
-    {
-      userId: user._id,
-      email: user.email,
-    },
-    process.env.JWT_SECRET!,
-    { expiresIn: REFRESH_TOKEN_EXPIRY }
-  );
-
-  res.cookie("refresh_token", newRefreshToken, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-    maxAge: REFRESH_TOKEN_EXPIRY * 1000,
-  });
 
   return res.json({
     success: true,
