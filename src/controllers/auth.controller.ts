@@ -18,9 +18,9 @@ export const signupUser = TryCatch<
   {}, //ReqCookies
   {} //Response
 >(async (req, res, next) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  const password = req.body.password;
+  const name = req.body?.name;
+  const email = req.body?.email;
+  const password = req.body?.password;
 
   if (!name) {
     return next(new ErrorHandler(400, "Name is required!"));
@@ -68,8 +68,8 @@ export const loginUser = TryCatch<
   { id: string; name: string; email: string; access_token: string } //Response
 >(async (req, res, next) => {
   // const { email, password } = req.body; //To avoid "undefined" error
-  const email = req.body.email;
-  const password = req.body.password;
+  const email = req.body?.email;
+  const password = req.body?.password;
 
   // Find user
   const user = await Users.findOne({ email });
