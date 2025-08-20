@@ -23,7 +23,7 @@ export const verifyAuth = TryCatch(async (req, res, next) => {
       const user = Users.findById(userId);
 
       if (!user) {
-        return next(new ErrorHandler(400, "User not found!"));
+        return next(new ErrorHandler(404, "User not found!"));
       }
 
       req.userId = userId;
