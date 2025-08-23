@@ -5,7 +5,7 @@ This custom starter template builds a robust foundation for server-side applicat
 ## Features
 
 - **TypeScript Integration**: Fully typed codebase for enhanced type safety and developer productivity.
-- **MongoDB with Mongoose**: Pre-configured MongoDB connection using Mongoose in `src/db/index.ts`, managed via `MONGODB_URI` environment variable.
+- **MongoDB with Mongoose**: Pre-configured MongoDB connection using Mongoose in `src/db/index.ts`, managed via `DB_URI` environment variable.
 - **Modular Structure**: Organized folders for routes, controllers, models, and utilities to ensure maintainability.
 - **Secure Middleware**: Includes `helmet` for security headers, `cors` with configurable origins, and `express-rate-limit` for IP rate limiting (100 requests/10 minutes).
 - **Authentication Utilities**: JWT-based auth with `TryCatch` for async error handling and `ErrorHandler` for consistent error responses.
