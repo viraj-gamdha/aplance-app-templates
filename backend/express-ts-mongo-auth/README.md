@@ -1,11 +1,11 @@
-# ExpressJs + TypeScript + MongoDB – Starter Template
+# ExpressJs + TypeScript + MongoDB + Auth – Starter Template
 
 This custom starter template builds a robust foundation for server-side applications using **Express.js**, **TypeScript**, and **MongoDB**, with a modular folder structure, routes, controllers, and utilities for streamlined development.
 
 ## Features
 
 - **TypeScript Integration**: Fully typed codebase for enhanced type safety and developer productivity.
-- **MongoDB with Mongoose**: Pre-configured MongoDB connection using Mongoose in `src/db/index.ts`, managed via `MONGODB_URI` environment variable.
+- **MongoDB with Mongoose**: Pre-configured MongoDB connection using Mongoose in `src/db/index.ts`, managed via `DB_URI` environment variable.
 - **Modular Structure**: Organized folders for routes, controllers, models, and utilities to ensure maintainability.
 - **Secure Middleware**: Includes `helmet` for security headers, `cors` with configurable origins, and `express-rate-limit` for IP rate limiting (100 requests/10 minutes).
 - **Authentication Utilities**: JWT-based auth with `TryCatch` for async error handling and `ErrorHandler` for consistent error responses.
@@ -21,7 +21,7 @@ src/
 │   ├── user.controller.ts            # Example controller for user-related logic
 │   └── ...                           # Add more controllers as needed
 ├── routes/                           # Express route definitions
-│   ├── user.routes.ts                # Routes for user-related endpoints
+│   ├── user.route.ts                 # Routes for user-related endpoints
 ├── db/                               # Database connection and configuration
 │   ├── index.ts                      # MongoDB connection setup using Mongoose
 ├── middlewares/                      # Custom middleware functions
@@ -45,7 +45,7 @@ src/
 
 1. **Clone the Template**:
    ```bash
-   git clone -b express-ts-mongo https://github.com/viraj-gamdha/aplance-app-templates.git my-project
+   git clone -b express-ts-mongo-auth https://github.com/viraj-gamdha/aplance-app-templates.git my-project
    cd my-project
    ```
 
