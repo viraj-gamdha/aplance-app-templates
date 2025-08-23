@@ -1,4 +1,4 @@
-# ExpressJs + TypeScript + MongoDB – Starter Template
+# ExpressJs + TypeScript + MongoDB + Auth – Starter Template
 
 This custom starter template builds a robust foundation for server-side applications using **Express.js**, **TypeScript**, and **MongoDB**, with a modular folder structure, routes, controllers, and utilities for streamlined development.
 
@@ -21,7 +21,7 @@ src/
 │   ├── user.controller.ts            # Example controller for user-related logic
 │   └── ...                           # Add more controllers as needed
 ├── routes/                           # Express route definitions
-│   ├── user.routes.ts                # Routes for user-related endpoints
+│   ├── user.route.ts                 # Routes for user-related endpoints
 ├── db/                               # Database connection and configuration
 │   ├── index.ts                      # MongoDB connection setup using Mongoose
 ├── middlewares/                      # Custom middleware functions
@@ -45,7 +45,7 @@ src/
 
 1. **Clone the Template**:
    ```bash
-   git clone -b express-ts-mongo https://github.com/viraj-gamdha/aplance-app-templates.git my-project
+   git clone -b express-ts-mongo-auth https://github.com/viraj-gamdha/aplance-app-templates.git my-project
    cd my-project
    ```
 
