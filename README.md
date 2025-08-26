@@ -14,9 +14,10 @@ This custom starter template builds on the minimal NextJs + TypeScript + SCSS se
 ## Folder Structure
 
 ```
+public/
+# Static assets served directly from the root URL
+
 src/
-  ├── public/
-  |   # Static assets served directly from the root URL
   ├── app/
   │   # NextJs pages & layout components
   ├── assets/
