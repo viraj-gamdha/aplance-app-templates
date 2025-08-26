@@ -1,4 +1,4 @@
-import { LinkButton } from "@/components/ui/Button";
+import { LinkButton } from "@/components/ui/button";
 
 const About = () => {
   return (

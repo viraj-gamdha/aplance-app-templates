@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes, FC, ReactNode } from "react";
 import classNames from "classnames";
-import s from "./Button.module.scss";
+import s from "./button.module.scss";
 import { Link, type LinkProps } from "react-router-dom";
 
 type ButtonVariants = "primary" | "bordered" | "icon";
