@@ -1,8 +1,8 @@
-import { useTheme } from "@/providers/ThemeProvider";
+import { useTheme } from "@/providers/theme-provider";
 import s from "./Header.module.scss";
 import logo from "@/assets/images/logo.png";
-import { Button } from "./Button";
-import { ThemeIcon } from "../icons/ThemeIcon";
+import { Button } from "../ui/button";
+import { ThemeIcon } from "../icon/theme-icon";
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();

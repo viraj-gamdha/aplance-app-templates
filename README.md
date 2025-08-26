@@ -24,12 +24,13 @@ src/
   │   # Static assets (e.g., images)
   ├── components/
   │   # Smaller reusable UI components with some separations
+  │   # Read as ui components, layout components, page components etc.
   ├── providers/
   │   # Context wrappers (e.g., ThemeProvider)
   ├── hooks/
   │   # Hooks (e.g., useAuth)
   ├── styles/
-  │   ├── global.scss
+  │   ├── globals.scss
   │   │   # Entry point. Default styles for global HTML elements
   │   ├── _media.scss
   │   │   # Media query variables (to use in SCSS files)

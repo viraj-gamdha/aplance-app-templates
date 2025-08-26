@@ -1,7 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import MainLayout from "./components/layouts/MainLayout";
-import Home from "./pages/Home";
-import About from "./pages/About";
+import MainLayout from "./components/layout/main-layout";
+import Home from "./pages/home";
+import About from "./pages/about";
 
 const App = () => {
   return (

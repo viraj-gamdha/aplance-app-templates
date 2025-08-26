@@ -15,11 +15,13 @@ export default defineConfig({
   css: {
     modules: {
       generateScopedName: (className, filePath) => {
-        const rawFileName = path.basename(filePath); // App.module.scss
-        const cleaned = rawFileName
-          .replace(/\b.module\b/, "") // Remove 'module'
+        const cleaned = path
+          .basename(filePath)
+          .replace(/\.module/, "") // Remove '.module'
           .replace(/\.[^/.]+$/, "") // Remove extension
-          .toLowerCase(); // Convert to lowercase
+          .replace(/([a-z0-9])([A-Z])/g, "$1_$2") // camelCase or PascalCase → snake_case
+          .replace(/[-\s]+/g, "_") // kebab-case or spaces → snake_case
+          .toLowerCase(); // Final lowercase
 
         const hash = crypto
           .createHash("sha256")
@@ -27,8 +29,7 @@ export default defineConfig({
           .digest("hex")
           .slice(0, 5);
 
-        // (e.g. button_base_xhwr3)
-        return `${cleaned}_${className}_${hash}`;
+        return `${cleaned}_${className}__${hash}`;
       },
     },
     // This is to import media vars (from _media.scss) in all scss style-sheets
