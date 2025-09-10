@@ -1,5 +1,5 @@
-import { useTheme } from "@/providers/theme-provider";
-import s from "./Header.module.scss";
+import { useTheme } from "@/providers/ThemeProvider";
+import s from "./header.module.scss";
 import logo from "@/assets/images/logo.png";
 import { Button } from "../ui/button";
 import { ThemeIcon } from "../icon/theme-icon";
