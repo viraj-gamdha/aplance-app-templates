@@ -1,9 +1,9 @@
 // Basic user controller
 
-import Users, { IUserDoc } from "@/models/user.model.js";
-import { IUser } from "@/types/user.type";
-import { TryCatch } from "@/utils/async-handler.js";
-import ErrorHandler from "@/utils/error-handler.js";
+import Users, { IUserDoc } from "@/models/user.js";
+import { IUser } from "@/types/user";
+import { TryCatch } from "@/utils/asyncHandler.js";
+import ErrorHandler from "@/utils/errorHandler.js";
 
 // Update user details
 export const updateUserDetail = TryCatch<

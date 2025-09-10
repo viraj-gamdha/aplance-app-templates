@@ -1,6 +1,6 @@
 import mongoose, { Schema, UpdateQuery } from "mongoose";
 import bcrypt from "bcrypt";
-import { IUser } from "@/types/user.type";
+import { IUser } from "@/types/user";
 
 export interface IUserDoc extends IUser, mongoose.Document {
   comparePassword(candidatePassword: string): Promise<boolean>;

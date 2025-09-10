@@ -1,5 +1,5 @@
-import { deleteUser, updateUserDetail } from "@/controllers/user.controller.js";
-import { verifyAuth } from "@/middlewares/verify-auth.middleware.js";
+import { deleteUser, updateUserDetail } from "@/controllers/user.js";
+import { verifyAuth } from "@/middlewares/verifyAuth.js";
 import { Router } from "express";
 
 const userRoutes = Router();
