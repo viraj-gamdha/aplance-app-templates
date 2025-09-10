@@ -1,6 +1,6 @@
 "use client";
 
-import { useTheme } from "@/providers/theme-provider";
+import { useTheme } from "@/providers/ThemeProvider";
 import s from "./header.module.scss";
 import { Button } from "../ui/button";
 import { ThemeIcon } from "../icon/theme-icon";
