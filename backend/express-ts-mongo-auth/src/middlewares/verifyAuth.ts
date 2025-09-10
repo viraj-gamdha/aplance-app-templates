@@ -1,7 +1,7 @@
-import Users from "@/models/user.model.js";
-import { AuthJwtPayload } from "@/types/user.type";
-import { TryCatch } from "@/utils/async-handler.js";
-import ErrorHandler from "@/utils/error-handler.js";
+import Users from "@/models/user.js";
+import { AuthJwtPayload } from "@/types/user";
+import { TryCatch } from "@/utils/asyncHandler.js";
+import ErrorHandler from "@/utils/errorHandler.js";
 import jwt from "jsonwebtoken";
 
 export const verifyAuth = TryCatch(async (req, res, next) => {

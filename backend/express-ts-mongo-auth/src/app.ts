@@ -1,13 +1,13 @@
 import express from "express";
 import helmet from "helmet";
 import cors, { CorsOptions } from "cors";
-import { errorMiddleware } from "@/middlewares/error.middleware.js";
+import { errorMiddleware } from "@/middlewares/error.js";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import rateLimit from "express-rate-limit";
-import { connectDB } from "./db/index.js";
-import { authRoutes } from "./routes/auth.route.js";
-import userRoutes from "./routes/user.route.js";
+import { connectDB } from "./db/init.js";
+import { authRoutes } from "./routes/auth.js";
+import userRoutes from "./routes/user.js";
 
 dotenv.config({ path: "./.env" });
 export const envMode = process.env.NODE_ENV?.trim() || "development";

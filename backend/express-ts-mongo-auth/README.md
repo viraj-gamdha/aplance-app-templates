@@ -5,7 +5,7 @@ This custom starter template builds a robust foundation for server-side applicat
 ## Features
 
 - **TypeScript Integration**: Fully typed codebase for enhanced type safety and developer productivity.
-- **MongoDB with Mongoose**: Pre-configured MongoDB connection using Mongoose in `src/db/index.ts`, managed via `DB_URI` environment variable.
+- **MongoDB with Mongoose**: Pre-configured MongoDB connection using Mongoose in `src/db/init.ts`, managed via `DB_URI` environment variable.
 - **Modular Structure**: Organized folders for routes, controllers, models, and utilities to ensure maintainability.
 - **Secure Middleware**: Includes `helmet` for security headers, `cors` with configurable origins, and `express-rate-limit` for IP rate limiting (100 requests/10 minutes).
 - **Authentication Utilities**: JWT-based auth with `TryCatch` for async error handling and `ErrorHandler` for consistent error responses.
@@ -18,23 +18,23 @@ This custom starter template builds a robust foundation for server-side applicat
 ```
 src/
 ├── controllers/                      # Request handlers for API endpoints
-│   ├── user.controller.ts            # Example controller for user-related logic
+│   ├── user.ts                       # Example controller for user-related logic
 │   └── ...                           # Add more controllers as needed
 ├── routes/                           # Express route definitions
-│   ├── user.route.ts                 # Routes for user-related endpoints
+│   ├── user.ts                       # Routes for user-related endpoints
 ├── db/                               # Database connection and configuration
-│   ├── index.ts                      # MongoDB connection setup using Mongoose
+│   ├── init.ts                       # MongoDB connection setup using Mongoose
 ├── middlewares/                      # Custom middleware functions
-│   ├── error.middleware.ts           # Centralized error handling middleware
-│   ├── verify-auth.middleware.ts     # Example middleware for authentication
+│   ├── error.ts                      # Centralized error handling middleware
+│   ├── verifyAuth.ts                 # Example middleware for authentication
 ├── models/                           # Mongoose schemas for MongoDB collections
-│   ├── user.model.ts                 # Example User schema with fields like name, email
+│   ├── user.ts                       # Example User schema with fields like name, email
 │   └── ...                           # Add more models as needed
 ├── types/                            # TypeScript type definitions
-│   ├── user.type.ts                  # Interfaces for User-related data
+│   ├── user.ts                       # Interfaces for User-related data
 ├── utils/                            # Utility functions and helpers
-│   ├── async-handler.ts              # Async wrapper for controllers
-│   ├── error-handler.ts              # Error handling utility
+│   ├── asyncHandler.ts               # Async wrapper for controllers
+│   ├── errorHandler.ts               # Error handling utility
 ├── app.ts                            # Main application entry point (Express setup)
 ├── .env.example                      # Template for environment variables
 ├── tsconfig.json                     # TypeScript configuration
